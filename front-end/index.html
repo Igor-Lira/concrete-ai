@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>AI Concrete</title>
+</head>
+
+<body>
+    <div class="container">
+        <div> <b> Dosagem </b> </div>
+        <div class="fields">
+            <div class="field">
+                <label for="cement" class="test"> Cimento </label>
+                <input id="cement" type="range" min="250" max="450" oninput="displaycement.innerHTML=value">
+                <span id="displaycement"> 350 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="water"> Água </label>
+                <input id="water" type="range" min="150" max="250" oninput="displaywater.innerHTML=value">
+                <span id="displaywater"> 175 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="fine Aggregate"> Agregado Miúdo </label>
+                <input id="fine_aggregate" type="range" min="500" max="900" oninput="displayfine.innerHTML=value">
+                <span id="displayfine"> 750 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="coarse_aggregate"> Agregado Graúdo </label>
+                <input id="coarse_aggregate" type="range" min="800" max="1200" oninput="displaycoarse.innerHTML=value">
+                <span id="displaycoarse"> 1050 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="fly_Ash"> Cinza Volante </label>
+                <input id="fly_ash" type="range" min="0" max="200" oninput="displayflyash.innerHTML=value">
+                <span id="displayflyash"> 0 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="slag"> Escória </label>
+                <input id="slag" type="range" min="0" max="200" oninput="displayslag.innerHTML=value">
+                <span id="displayslag"> 0 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="plasticizer"> Plastificante </label>
+                <input id="plasticizer" type="range" min="0" max="10" oninput="displayplasticizer.innerHTML=value">
+                <span id="displayplasticizer"> 0 </span> <span> kg/m³ </span>
+            </div>
+            <div class="field">
+                <label for="age"> Idade </label>
+                <input id="age" type="range" min="2" max="100" oninput="displayage.innerHTML=value">
+                <span id="displayage"> 28 </span> <span> dias </span>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Calcular" onclick="submit()">
+        </div>
+        <div>
+            <span id="fc-predicted"></span>
+            <br>
+            <span id="slump-predicted"></span>
+        </div>
+    </div>
+</body>
+</html>
